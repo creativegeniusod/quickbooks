@@ -19,6 +19,11 @@
 		echo json_encode($displayString, JSON_PRETTY_PRINT);
 		?>
 	</p>-->
+	<?php
+	if(!empty($access_token_db)) {
+		echo 'Your access token is set. <br /><br />';
+	}
+	?>
 
 	<button  type="button" class="btn btn-success" onclick="oauth.loginPopup()">Connect to QuickBooks</button>
 

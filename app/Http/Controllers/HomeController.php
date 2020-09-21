@@ -98,7 +98,13 @@ class HomeController extends Controller {
 		}
 
 		$data = [];
+
+		$token_data = $this->get_token();
+
+		$access_token_db = $token_data->getAccessToken();
+
 		$data['authUrl'] = $authUrl;
+		$data['access_token_db'] = $access_token_db;
 		$data['accessTokenJson'] = $accessTokenJson;
 
 		return view('home/auth_quickbook', $data);
